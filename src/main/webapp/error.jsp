@@ -1,4 +1,4 @@
-<%-- <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Error - Bookstore</title>
@@ -9,4 +9,3 @@
 <a href="login.jsp">Go to Login</a>
 </body>
 </html>
- --%>

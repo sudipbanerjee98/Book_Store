@@ -16,7 +16,7 @@ public class BookDao {
         List<Book> books = null;
 //        try {
             @SuppressWarnings("unused")
-			Query query = (Query) em.createNativeQuery("SELECT * FROM books", Book.class).getResultList();
+			Query query = (Query) em.createNativeQuery("SELECT * FROM Book", Book.class).getResultList();
 //        } finally {
 //            em.close();
 //        }
@@ -28,7 +28,7 @@ public class BookDao {
         EntityManager em = emf.createEntityManager();
         List<Book> books = null;
 //        try {
-            Query query = em.createNativeQuery("SELECT * FROM books WHERE title LIKE ? OR author LIKE ?", Book.class);
+            Query query = em.createNativeQuery("SELECT * FROM Book WHERE title LIKE ? OR author LIKE ?", Book.class);
             String pattern = "%" + keyword + "%";
             query.setParameter(1, pattern);
             query.setParameter(2, pattern);
@@ -44,7 +44,7 @@ public class BookDao {
         Book book = null;
         try {
             Query query = em.createNativeQuery(
-                "SELECT * FROM books WHERE id = ?", Book.class);
+                "SELECT * FROM Book WHERE id = ?", Book.class);
             query.setParameter(1, id);
             book = (Book) query.getSingleResult();
         } finally {

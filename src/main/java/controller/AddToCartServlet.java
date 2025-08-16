@@ -11,7 +11,7 @@ import java.util.List;
 import dao.BookDao;
 
 @SuppressWarnings("serial")
-@WebServlet("/addtocart")
+@WebServlet("/cart")
 public class AddToCartServlet extends HttpServlet {
     BookDao bookDAO = new BookDao();
     
